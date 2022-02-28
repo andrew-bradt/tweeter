@@ -13,3 +13,14 @@ nav {
 nav span:first-of-type {
   font-family: 'Bungee', sans-serif;
 }
+
+nav div:first-of-type {
+  display: flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+nav i {
+  color: red;
+}
