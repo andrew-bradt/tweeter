@@ -5,6 +5,10 @@ article.tweet {
   padding: 15px;
 }
 
+article.tweet:hover {
+  box-shadow:5px 5px #A6BCF7;
+}
+
 article.tweet header, footer {
   display: flex;
   flex-direction: row;
@@ -18,3 +22,5 @@ article.tweet i {
 article.tweet i:hover {
   color:#a14056;
 }
+
+
