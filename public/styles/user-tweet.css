@@ -50,8 +50,8 @@ article.tweet p {
   font-weight: 600;
   font-size: 0.9em;
   border-bottom: 5px solid #545149;
-  padding: 15px;
-  margin-bottom: 5px;
+  padding: 50px 25px;
+  margin: 15px 0px 5px 0px;
 }
 
 article.tweet footer span {
