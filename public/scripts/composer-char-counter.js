@@ -17,8 +17,8 @@ const _getRemainingChars = (val) => {
 const monitorCharCount = () => {
   let prevCharCount = 140;
   const changeCounterStyle = (el, remainingChars) => {
-    const addClassCond = prevCharCount > 0 && remainingChars < 0;
-    const removeClassCond = prevCharCount < 0 && remainingChars > 0;
+    const addClassCond = prevCharCount >= 0 && remainingChars < 0;
+    const removeClassCond = prevCharCount < 0 && remainingChars >= 0;
     if (addClassCond) {
       el.addClass('exceeded-char-count');
     } else if (removeClassCond) {
