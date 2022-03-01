@@ -3,7 +3,7 @@ article.tweet {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  margin-top: 75px;
+  /* margin-top: 20px; */
   margin-bottom: 30px;
 }
 
