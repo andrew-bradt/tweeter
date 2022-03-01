@@ -32,3 +32,7 @@
 .new-tweet output {
   margin-right: 10px;
 }
+
+.exceeded-char-count {
+  color: #FF0000;
+}
