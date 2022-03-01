@@ -4,3 +4,9 @@ article.tweet {
   flex-direction: column;
   padding: 15px;
 }
+
+article.tweet header, footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
