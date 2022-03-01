@@ -34,6 +34,10 @@
   padding: 5px 10px;
 }
 
+.new-tweet button:hover {
+  background-color: #df9a01;
+}
+
 .new-tweet output {
   margin-right: 10px;
 }
