@@ -9,18 +9,33 @@ article.tweet:hover {
   box-shadow:5px 5px #A6BCF7;
 }
 
-article.tweet header, footer {
+article.tweet header, header div, footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+article.tweet header, header div{
+  align-items: center;
 }
 
 article.tweet i {
   color: #4056A1;
 }
 
+article.tweet p {
+  font-weight: 600;
+  font-size: 0.9em;
+  border-bottom: 5px solid #545149;
+  padding: 15px;
+}
+
 article.tweet i:hover {
   color:#a14056;
 }
 
+article.tweet footer span {
+  font-size: 0.75em;
+  font-weight: 600;
+}
 
