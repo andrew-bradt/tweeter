@@ -3,6 +3,7 @@ article.tweet {
   display: flex;
   flex-direction: column;
   padding: 15px;
+  margin-top: 75px;
 }
 
 article.tweet:hover {
@@ -19,8 +20,13 @@ article.tweet header, header div{
   align-items: center;
 }
 
+article.tweet footer {
+  align-items: flex-start;
+}
+
 article.tweet i {
   color: #4056A1;
+  font-size: 0.65em;
 }
 
 article.tweet p {
