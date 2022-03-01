@@ -10,3 +10,11 @@ article.tweet header, footer {
   flex-direction: row;
   justify-content: space-between;
 }
+
+article.tweet i {
+  color: #4056A1;
+}
+
+article.tweet i:hover {
+  color:#a14056;
+}
