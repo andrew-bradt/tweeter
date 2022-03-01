@@ -22,6 +22,7 @@ article.tweet header, header div{
 
 article.tweet footer {
   align-items: flex-start;
+  padding: 0px 15px;
 }
 
 article.tweet i {
