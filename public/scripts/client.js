@@ -5,15 +5,8 @@
  */
 
 $(()=>{
-  // renderTweets(data);
   loadTweets();
-  $('.new-tweet form').on('submit', function(e) {
-    e.preventDefault();
-    const data = $(this).serialize();
-    $.post('/tweets', data, ()=>{
-      console.log('Success');
-    });
-  });
+  submitTweet();
 });
 
 const createTweetElement = (data) => {
@@ -39,6 +32,16 @@ const createTweetElement = (data) => {
   </article>
   `;
   return markup;
+};
+
+const submitTweet = () => {
+  $('.new-tweet form').on('submit', function(e) {
+    e.preventDefault();
+    const data = $(this).serialize();
+    $.post('/tweets', data, ()=>{
+      console.log('Success');
+    });
+  });
 };
 
 const renderTweets = (tweets) => {
