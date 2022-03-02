@@ -6,7 +6,17 @@
 
 $(()=>{
   loadTweets();
-  onTweetSubmit();
+  $('.new-tweet form').on('submit', (e)=>{
+    e.preventDefault();
+    const data = $(e.target).serialize();
+    $.post('/tweets', data)
+      .then(()=>{
+        loadTweets();
+      })
+      .catch((err)=>{
+        console.log(err);
+      });
+  });
 });
 
 const createTweetElement = (data) => {
@@ -34,16 +44,6 @@ const createTweetElement = (data) => {
   return markup;
 };
 
-const onTweetSubmit = () => {
-  $('.new-tweet form').on('submit', (e)=>{
-    e.preventDefault();
-    const data = $(e.target).serialize();
-    $.post('/tweets', data).then(()=>{
-      loadTweets();
-    });
-  });
-};
-
 const renderTweets = (tweets) => {
   const tweetsContainer = $('#tweets-container');
   tweetsContainer.empty();
@@ -52,7 +52,8 @@ const renderTweets = (tweets) => {
 };
 
 const loadTweets = () => {
-  $.get('/tweets').then(data=>{
-    renderTweets(data);
-  });
+  $.get('/tweets')
+    .then(data=>{
+      renderTweets(data);
+    });
 };
