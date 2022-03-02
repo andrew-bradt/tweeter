@@ -8,10 +8,16 @@ $(()=>{
   loadTweets();
   $('.new-tweet form').on('submit', (e)=>{
     e.preventDefault();
+
+    const numChars = $(e.target).children()[1].value.length;
+    if (!numChars) return alert('Your tweet contains no characters!');
+    if (numChars > 140) return alert('Tweets cannot exceed 140 characters');
+
     const data = $(e.target).serialize();
     $.post('/tweets', data)
       .then(()=>{
         loadTweets();
+        e.target.reset();
       })
       .catch((err)=>{
         console.log(err);
