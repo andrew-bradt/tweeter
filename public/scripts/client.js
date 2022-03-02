@@ -6,6 +6,9 @@
 
 $(()=>{
   renderTweets(data);
+  $('.new-tweet form').on('submit', (e)=>{
+    e.preventDefault();
+  });
 });
 
 const data = [
