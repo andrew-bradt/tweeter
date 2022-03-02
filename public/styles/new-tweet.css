@@ -20,7 +20,7 @@
   font-family: arial;
 }
 
-.new-tweet div {
+.new-tweet form div {
   width: 100%;
   font-family: 'Bungee', sans-serif;
   display: flex;
