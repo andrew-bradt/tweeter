@@ -1,5 +1,4 @@
 .new-tweet {
-  padding: 0px 15px;
   margin-top: 55px;
   margin-bottom: 30px;
 }
@@ -18,6 +17,10 @@
   margin: 2px 0px 10px 0px;
   font-size: 0.7em;
   font-family: arial;
+}
+
+.new-tweet form {
+  padding: 0 15px;
 }
 
 .new-tweet form div {
