@@ -8,7 +8,12 @@ $(()=>{
   renderTweets(data);
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
-    console.log($(this).serialize());
+    const data = $(this).serialize();
+    $.ajax({
+      type: 'POST',
+      url: '/tweets',
+      data
+    });
   });
 });
 
