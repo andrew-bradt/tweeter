@@ -6,8 +6,9 @@
 
 $(()=>{
   renderTweets(data);
-  $('.new-tweet form').on('submit', (e)=>{
+  $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
+    console.log($(this).serialize());
   });
 });
 
