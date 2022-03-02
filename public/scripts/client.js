@@ -40,14 +40,16 @@ const onTweetSubmit = () => {
     const data = $(this).serialize();
     $.post('/tweets', data)
     .then(()=>{
-      console.log('Successfully submitted tweet');
+      loadTweets();
     });
   });
 };
 
 const renderTweets = (tweets) => {
+  const tweetsContainer = $('#tweets-container');
+  tweetsContainer.empty();
   const markup = tweets.map(tweet=>createTweetElement(tweet));
-  $('#tweets-container').append(markup);
+  tweetsContainer.append(markup);
 };
 
 const loadTweets = () => {
