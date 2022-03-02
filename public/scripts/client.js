@@ -35,9 +35,9 @@ const createTweetElement = (data) => {
 };
 
 const onTweetSubmit = () => {
-  $('.new-tweet form').on('submit', function(e) {
+  $('.new-tweet form').on('submit', (e)=>{
     e.preventDefault();
-    const data = $(this).serialize();
+    const data = $(e.target).serialize();
     $.post('/tweets', data)
     .then(()=>{
       loadTweets();
