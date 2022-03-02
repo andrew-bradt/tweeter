@@ -38,8 +38,7 @@ const onTweetSubmit = () => {
   $('.new-tweet form').on('submit', (e)=>{
     e.preventDefault();
     const data = $(e.target).serialize();
-    $.post('/tweets', data)
-    .then(()=>{
+    $.post('/tweets', data).then(()=>{
       loadTweets();
     });
   });
@@ -53,8 +52,7 @@ const renderTweets = (tweets) => {
 };
 
 const loadTweets = () => {
-  $.get('/tweets')
-  .then(data=>{
+  $.get('/tweets').then(data=>{
     renderTweets(data);
   });
 };
