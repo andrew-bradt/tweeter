@@ -36,7 +36,7 @@ const createTweetElement = (data) => {
       </div>
       <span>${user.handle}</span>
     </header>
-    <p>${content.text}</p>
+    <p>${escapeText(content.text)}</p>
     <footer>
       <span>${timeago.format(created_at)}</span>
       <div>
@@ -65,4 +65,10 @@ const loadTweets = () => {
     .catch((err)=>{
       console.log(err);
     });
+};
+
+const escapeText = (str) => {
+  const div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
