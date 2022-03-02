@@ -4,24 +4,20 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// Abstract error handling into a function
+// Abstract post /tweets into a function 
+
 $(()=>{
   $('.error').hide();
   loadTweets();
+
   $('.new-tweet form').on('submit', (e)=>{
     e.preventDefault();
     $('.error').hide();
-    const numChars = $(e.target).children()[1].value.length;
-    if (!numChars) return displayError('Your tweet contains no characters!');
-    if (numChars > 140) return displayError('Tweets cannot exceed 140 characters');
-    const data = $(e.target).serialize();
-    $.post('/tweets', data)
-      .then(()=>{
-        loadTweets();
-        e.target.reset();
-      })
-      .catch((err)=>{
-        console.log(err);
-      });
+    
+    if(!handleInvalidTweet(e.target)) {
+      postTweet(e.target);
+    }
   });
 });
 
@@ -74,8 +70,29 @@ const escapeText = (str) => {
 };
 
 const displayError = (msg) => {
-  const div = $('.error');
-  const span = div.children('span');
-  span.text(msg);
-  div.slideDown();
+  if (msg) {
+    const div = $('.error');
+    const span = div.children('span');
+    span.text(msg);
+    div.slideDown();
+    return true;
+  }
+};
+
+const handleInvalidTweet = (target) => {
+  const numChars = $(target).children()[1].value.length;
+  if (!numChars) return displayError('Your tweet contains no characters!');
+  if (numChars > 140) return displayError('Tweets cannot exceed 140 characters.');
+};
+
+const postTweet = (target) => {
+  const data = $(target).serialize();
+  $.post('/tweets', data)
+    .then(()=>{
+      loadTweets();
+      target.reset();
+    })
+    .catch((err)=>{
+      console.log(err);
+    });
 };
