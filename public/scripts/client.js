@@ -9,10 +9,8 @@ $(()=>{
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
     const data = $(this).serialize();
-    $.ajax({
-      type: 'POST',
-      url: '/tweets',
-      data
+    $.post('/tweets', data, ()=>{
+      console.log('Success');
     });
   });
 });
