@@ -5,14 +5,14 @@
  */
 
 $(()=>{
+  $('.error').hide();
   loadTweets();
   $('.new-tweet form').on('submit', (e)=>{
     e.preventDefault();
-
+    $('.error').hide();
     const numChars = $(e.target).children()[1].value.length;
-    if (!numChars) return alert('Your tweet contains no characters!');
-    if (numChars > 140) return alert('Tweets cannot exceed 140 characters');
-
+    if (!numChars) return displayError('Your tweet contains no characters!');
+    if (numChars > 140) return displayError('Tweets cannot exceed 140 characters');
     const data = $(e.target).serialize();
     $.post('/tweets', data)
       .then(()=>{
@@ -71,4 +71,11 @@ const escapeText = (str) => {
   const div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
+};
+
+const displayError = (msg) => {
+  const div = $('.error');
+  const span = div.children('span');
+  span.text(msg);
+  div.slideDown();
 };
