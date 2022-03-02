@@ -6,7 +6,7 @@
 
 $(()=>{
   loadTweets();
-  submitTweet();
+  onTweetSubmit();
 });
 
 const createTweetElement = (data) => {
@@ -34,7 +34,7 @@ const createTweetElement = (data) => {
   return markup;
 };
 
-const submitTweet = () => {
+const onTweetSubmit = () => {
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
     const data = $(this).serialize();
