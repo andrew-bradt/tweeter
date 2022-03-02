@@ -38,8 +38,9 @@ const submitTweet = () => {
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
     const data = $(this).serialize();
-    $.post('/tweets', data, ()=>{
-      console.log('Success');
+    $.post('/tweets', data)
+    .then(()=>{
+      console.log('Successfully submitted tweet');
     });
   });
 };
