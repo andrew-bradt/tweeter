@@ -5,7 +5,8 @@
  */
 
 $(()=>{
-  renderTweets(data);
+  // renderTweets(data);
+  loadTweets();
   $('.new-tweet form').on('submit', function(e) {
     e.preventDefault();
     const data = $(this).serialize();
@@ -14,31 +15,6 @@ $(()=>{
     });
   });
 });
-
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
 
 const createTweetElement = (data) => {
   const {user, content, created_at} = data;
@@ -68,4 +44,11 @@ const createTweetElement = (data) => {
 const renderTweets = (tweets) => {
   const markup = tweets.map(tweet=>createTweetElement(tweet));
   $('#tweets-container').append(markup);
+};
+
+const loadTweets = () => {
+  $.get('/tweets')
+  .then(data=>{
+    renderTweets(data);
+  });
 };
