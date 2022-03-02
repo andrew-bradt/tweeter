@@ -53,9 +53,11 @@ const createTweetElement = (data) => {
   return markup;
 };
 
-const renderTweets = (tweets) => tweets.map(tweet=>createTweetElement(tweet));
+const renderTweets = (tweets) => {
+  const markup = tweets.map(tweet=>createTweetElement(tweet));
+  $(()=>{
+    $('#tweets-container').append(markup);
+  });
+};
 
-$(()=>{
-  $('main').append(renderTweets(data));
-});
-// console.log($tweet);
+renderTweets(data);
