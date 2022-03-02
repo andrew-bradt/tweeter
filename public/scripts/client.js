@@ -55,5 +55,8 @@ const loadTweets = () => {
   $.get('/tweets')
     .then(data=>{
       renderTweets(data);
+    })
+    .catch((err)=>{
+      console.log(err);
     });
 };
