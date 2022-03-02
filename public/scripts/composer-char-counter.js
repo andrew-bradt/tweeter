@@ -1,7 +1,7 @@
 $(document).ready(function() {
   const changeCounterStyle = monitorCharCount();
   $('.new-tweet textarea').on('input', function() {
-    const remainingChars = _getRemainingChars(this.value);
+    const remainingChars = getRemainingChars(this.value);
     const counter = $(this).siblings().children().last();
     counter.text(remainingChars);
     changeCounterStyle(counter, remainingChars);
@@ -9,7 +9,7 @@ $(document).ready(function() {
   
 });
 
-const _getRemainingChars = (val) => {
+const getRemainingChars = (val) => {
   const tweetSize = 140;
   return tweetSize - val.length;
 };
