@@ -4,9 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Abstract error handling into a function
-// Abstract post /tweets into a function 
-
 $(()=>{
   $('.error').hide();
   loadTweets();
@@ -15,7 +12,7 @@ $(()=>{
     e.preventDefault();
     $('.error').hide();
     
-    if(!handleInvalidTweet(e.target)) {
+    if (!handleInvalidTweet(e.target)) {
       postTweet(e.target);
     }
   });
