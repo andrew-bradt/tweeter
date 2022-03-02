@@ -3,6 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+$(()=>{
+  renderTweets(data);
+});
+
 const data = [
   {
     "user": {
@@ -55,9 +60,5 @@ const createTweetElement = (data) => {
 
 const renderTweets = (tweets) => {
   const markup = tweets.map(tweet=>createTweetElement(tweet));
-  $(()=>{
-    $('#tweets-container').append(markup);
-  });
+  $('#tweets-container').append(markup);
 };
-
-renderTweets(data);
