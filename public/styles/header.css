@@ -1,4 +1,4 @@
-body > header {
+#wrapper > header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -9,18 +9,16 @@ body > header {
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
 }
 
-body > header h2 {
+#wrapper > header h2 {
   font-size: 1.5em;
 }
 
-body > header span {
+#wrapper > header span {
   font-weight:600;
 }
 
 @media only screen and (min-width: 768px) {
-  /* Using flex-box wrap with margin left is causing the header and main elements to be on separate lines which isn't the desired behaviour. */
-  body > header {
-    /* margin: 85px 0px 0px 30px; */
+  #wrapper > header {
     margin-top: 85px;
     width: 40%;
     padding: 30px;
