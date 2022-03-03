@@ -9,7 +9,7 @@ $(()=>{
   loadTweets();
 
   const {changeCounterStyle, resetPrevCharCount} = monitorCharCount();
-  
+
   $('.new-tweet textarea').on('input', function() {
     const remainingChars = getRemainingChars(this.value);
     const counter = $(this).siblings().children().last();
@@ -22,8 +22,9 @@ $(()=>{
     $('.error').hide();
     
     if (!handleInvalidTweet(e.target)) {
+      resetPrevCharCount();
+      $('output').text(140);
       postTweet(e.target);
-
     }
   });
 });
