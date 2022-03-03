@@ -16,3 +16,9 @@ body > header h2 {
 body > header span {
   font-weight:600;
 }
+
+@media only screen and (min-width: 768px) {
+  body > header {
+    width: 50%;
+  }
+}

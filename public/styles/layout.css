@@ -29,6 +29,16 @@ main {
   background-color:inherit;
 }
 
+@media only screen and (min-width: 768px) {
+  body {
+    flex-flow: row wrap;
+
+  }
+  main {
+    width: 50%;
+  }
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
