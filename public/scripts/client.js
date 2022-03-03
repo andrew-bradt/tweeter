@@ -14,6 +14,7 @@ $(()=>{
     
     if (!handleInvalidTweet(e.target)) {
       postTweet(e.target);
+
     }
   });
 });
@@ -46,7 +47,8 @@ const createTweetElement = (data) => {
 const renderTweets = (tweets) => {
   const tweetsContainer = $('#tweets-container');
   tweetsContainer.empty();
-  const markup = tweets.map(tweet=>createTweetElement(tweet));
+  const sortedTweets = tweets.sort((a, b) => b.created_at - a.created_at);
+  const markup = sortedTweets.map(tweet=>createTweetElement(tweet));
   tweetsContainer.append(markup);
 };
 
