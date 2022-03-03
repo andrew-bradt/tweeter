@@ -1,5 +1,4 @@
 #wrapper > header {
-  /* height: 275px; */
   padding: 30px 0px;
   width: 100%;
   display: flex;
@@ -9,7 +8,10 @@
   align-items:center;
   background-color:#df9a01;
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
-  /* padding-right: 20px; */
+}
+
+#wrapper > header * {
+  z-index: 1;
 }
 
 #wrapper > header h2 {

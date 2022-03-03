@@ -8,6 +8,8 @@ nav {
   align-items: center;
   position: sticky;
   top: 0px;
+  background-color:#df9a01;
+  background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
 }
 
 nav span:first-of-type {
@@ -36,5 +38,6 @@ nav i {
     padding: 0.5em 1.5em;
     background-color: #4056A1;
     background-image: none;
+    z-index: 2;
   }
 }
