@@ -1,15 +1,14 @@
 nav {
   width: 100vw;
-  height: 120px;
-  background-color: #4056A1;
   color: #FFFFFF;
-  padding: 0 1.5em;
+  padding: 0.5em 1.5em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   top:0;
-  position:sticky;
+  position: sticky;
+  /* For Larger than Mobile */
 }
 
 nav span:first-of-type {
@@ -25,4 +24,11 @@ nav div:first-of-type {
 
 nav i {
   color: red;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    position:sticky;
+    background-color: #4056A1;
+  }
 }
