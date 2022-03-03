@@ -14,11 +14,16 @@ nav span:first-of-type {
   font-family: 'Bungee', sans-serif;
 }
 
-nav div:first-of-type {
+nav div {
   display: flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  font-size: 0.8em;
+}
+
+nav div strong {
+  font-weight: 600;
 }
 
 nav i {
