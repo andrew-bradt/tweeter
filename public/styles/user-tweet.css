@@ -3,7 +3,6 @@ article.tweet {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  /* margin-top: 20px; */
   margin-bottom: 30px;
 }
 
@@ -57,4 +56,3 @@ article.tweet p {
 article.tweet footer span {
   margin-top: 5px;
 }
-
