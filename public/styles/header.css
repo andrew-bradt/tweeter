@@ -1,20 +1,29 @@
 #wrapper > header {
-  height: 400px;
+  /* height: 275px; */
+  padding: 30px 0px;
   width: 100%;
   display: flex;
   color: white;
   flex-direction:column;
+  justify-content:center;
   align-items:center;
   background-color:#df9a01;
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
+  /* padding-right: 20px; */
 }
 
 #wrapper > header h2 {
-  font-size: 1.5em;
+  font-size: 1.0em;
+  text-align:center;
 }
 
 #wrapper > header span {
   font-weight:600;
+}
+
+#wrapper > header img {
+  width: 30%;
+  max-width: 180px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -22,5 +31,10 @@
     margin-top: 85px;
     width: 40%;
     padding: 30px;
+  }
+
+  #wrapper > header img {
+    width: 80%;
+    max-width: 256px;
   }
 }
