@@ -8,6 +8,15 @@ $(()=>{
   $('.error').hide();
   loadTweets();
 
+  const {changeCounterStyle, resetPrevCharCount} = monitorCharCount();
+  
+  $('.new-tweet textarea').on('input', function() {
+    const remainingChars = getRemainingChars(this.value);
+    const counter = $(this).siblings().children().last();
+    counter.text(remainingChars);
+    changeCounterStyle(counter, remainingChars);
+  });
+
   $('.new-tweet form').on('submit', (e)=>{
     e.preventDefault();
     $('.error').hide();
