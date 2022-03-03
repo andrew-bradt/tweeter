@@ -1,11 +1,12 @@
 $(()=>{
   loadTweets();
 
+  // from /scripts/composer-char-counter.js
   const {changeCounterStyle, resetPrevCharCount} = monitorCharCount();
 
   $('.new-tweet textarea').on('input', function() {
     const remainingChars = getRemainingChars(this.value);
-    const counter = $(this).siblings().children().last();
+    const counter = $('output');
     counter.text(remainingChars);
     changeCounterStyle(counter, remainingChars);
   });
