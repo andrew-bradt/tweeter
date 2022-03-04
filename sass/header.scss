@@ -3,10 +3,10 @@
   width: 100%;
   display: flex;
   color: white;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #df9a01;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:#df9a01;
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
 }
 
@@ -15,12 +15,12 @@
 }
 
 #wrapper > header h2 {
-  font-size: 1em;
-  text-align: center;
+  font-size: 1.0em;
+  text-align:center;
 }
 
 #wrapper > header span {
-  font-weight: 600;
+  font-weight:600;
 }
 
 #wrapper > header img {
