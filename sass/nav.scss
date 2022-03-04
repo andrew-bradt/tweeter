@@ -1,5 +1,4 @@
-$primary-color: #df9a01;
-$secondary-color: #4056A1;
+@use 'colors';
 
 nav {
   width: 100vw;
@@ -11,7 +10,7 @@ nav {
   align-items: center;
   position: sticky;
   top: 0px;
-  background-color: $primary-color;
+  background-color: colors.$primary;
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
   
   span:first-of-type {
@@ -31,7 +30,7 @@ nav {
   }
 
   i {
-    color: red;
+    color: colors.$error;
   }
 }
 
@@ -39,7 +38,7 @@ nav {
   nav {
     top:0px;
     padding: 0.5em 1.5em;
-    background-color: $secondary-color;
+    background-color: colors.$secondary;
     background-image: none;
     z-index: 2;
   }
