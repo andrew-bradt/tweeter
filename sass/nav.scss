@@ -9,7 +9,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: sticky;
-  top: 0px;
+  top: 10px;
   background-color: colors.$secondary;
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
   
@@ -19,6 +19,7 @@ nav {
 
   div {
     display: flex;
+    margin-top: 10px;
     flex-direction:column;
     justify-content:center;
     align-items:center;
@@ -41,5 +42,9 @@ nav {
     background-color: colors.$primary;
     background-image: none;
     z-index: 2;
+
+    div {
+      margin-top: 0;
+    }
   }
 }
