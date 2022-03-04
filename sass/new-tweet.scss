@@ -1,3 +1,5 @@
+@use 'colors';
+
 .new-tweet {
   margin-top: 55px;
   margin-bottom: 30px;
@@ -9,7 +11,7 @@
 
 .new-tweet textarea {
   width: 100%;
-  border-color: #545149;
+  border-color: colors.$secondary-font;
   background-color: inherit;
   resize: none;
   border-width: 0 0 5px 0;
@@ -32,14 +34,14 @@
 }
 
 .new-tweet button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: colors.$primary;
+  color: colors.$primary-font;
   border: none;
   padding: 5px 10px;
 }
 
 .new-tweet button:hover {
-  background-color: #df9a01;
+  background-color: colors.$secondary;
 }
 
 .new-tweet output {
@@ -47,5 +49,5 @@
 }
 
 .exceeded-char-count {
-  color: #FF0000;
+  color: colors.$error;
 }
