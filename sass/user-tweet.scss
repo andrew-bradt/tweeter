@@ -1,60 +1,63 @@
 @use 'colors';
 
+%row-spaced {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 article.tweet {
   border: 5px solid colors.$border;
   display: flex;
   flex-direction: column;
   padding: 20px;
   margin-bottom: 30px;
-}
+  &:hover {
+    box-shadow:5px 5px colors.$tweet-drop-shadow;
+  }
 
-article.tweet:hover {
-  box-shadow:5px 5px colors.$tweet-drop-shadow;
-}
+  header {
+    @extend %row-spaced;
+    
+    & div {
+      @extend %row-spaced;
+    }
 
-article.tweet header, header div, footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+    & > span:last-of-type {
+      color: colors.$handle;
+      font-weight: 600;
+    }
+  }
 
-article.tweet header, header div{
-  align-items: center;
-}
+  img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  footer {
+    @extend %row-spaced;
+    padding: 0px 15px;
+    font-size: 0.65em;
 
-article.tweet header > span:last-of-type {
-  color: colors.$handle;
-  font-weight: 600;
-}
+    span {
+      margin-top: 5px;
+    }
+  }
+  
+  i {
+    color: colors.$primary;
+    margin-left: 5px;
+    &:hover {
+      color:colors.$secondary;
+    }
+  }
 
-article.tweet img {
-  width: 50px;
-  margin-right: 10px;
-}
-
-article.tweet footer {
-  padding: 0px 15px;
-  align-items: center;
-  font-size: 0.65em;
-}
-
-article.tweet i {
-  color: colors.$primary;
-  margin-left: 5px;
-}
-
-article.tweet i:hover {
-  color:colors.$secondary;
-}
-
-article.tweet p {
-  font-weight: 600;
-  font-size: 0.9em;
-  border-bottom: 5px solid colors.$border;
-  padding: 50px 25px;
-  margin: 15px 0px 5px 0px;
-}
-
-article.tweet footer span {
-  margin-top: 5px;
+  p {
+    font-weight: 600;
+    font-size: 0.9em;
+    border-bottom: 5px solid colors.$border;
+    padding: 50px 25px;
+    margin: 15px 0px 5px 0px;
+  }
 }
