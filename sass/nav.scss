@@ -2,7 +2,7 @@
 
 nav {
   width: 100vw;
-  color: #FFFFFF;
+  color: colors.$primary-font;
   padding: 0 1.5em;
   display: flex;
   flex-direction: row;
@@ -10,7 +10,7 @@ nav {
   align-items: center;
   position: sticky;
   top: 0px;
-  background-color: colors.$primary;
+  background-color: colors.$secondary;
   background-image: url("https://www.transparenttextures.com/patterns/grilled-noise.png");
   
   span:first-of-type {
@@ -38,7 +38,7 @@ nav {
   nav {
     top:0px;
     padding: 0.5em 1.5em;
-    background-color: colors.$secondary;
+    background-color: colors.$primary;
     background-image: none;
     z-index: 2;
   }
