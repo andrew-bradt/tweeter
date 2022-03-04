@@ -5,3 +5,7 @@
   font-weight: 600;
   margin-bottom: 30px;
 }
+
+.exceeded-char-count {
+  color: #FF0000;
+}

@@ -3,51 +3,46 @@
 .new-tweet {
   margin-top: 55px;
   margin-bottom: 30px;
-}
 
-.new-tweet label {
-  font-weight:600;
-}
+  button {
+    background-color: colors.$primary;
+    color: colors.$primary-font;
+    border: none;
+    padding: 5px 10px;
+    &:hover {
+      background-color: colors.$secondary;
+    }
+  }
 
-.new-tweet textarea {
-  width: 100%;
-  border-color: colors.$secondary-font;
-  background-color: inherit;
-  resize: none;
-  border-width: 0 0 5px 0;
-  outline: none;
-  margin: 2px 0px 10px 0px;
-  font-size: 0.7em;
-  font-family: arial;
-}
+  label {
+    font-weight:600;
+  }
 
-.new-tweet form {
-  padding: 0 15px;
-}
+  form {
+    padding: 0 15px;
 
-.new-tweet form div {
-  width: 100%;
-  font-family: 'Bungee', sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-}
+    div {
+      width: 100%;
+      font-family: 'Bungee', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      align-items:center;
+    }
+  }
 
-.new-tweet button {
-  background-color: colors.$primary;
-  color: colors.$primary-font;
-  border: none;
-  padding: 5px 10px;
-}
+  textarea {
+    width: 100%;
+    border-color: colors.$secondary-font;
+    background-color: inherit;
+    resize: none;
+    border-width: 0 0 5px 0;
+    outline: none;
+    margin: 2px 0px 10px 0px;
+    font-size: 0.7em;
+    font-family: arial;
+  }
 
-.new-tweet button:hover {
-  background-color: colors.$secondary;
-}
-
-.new-tweet output {
-  margin-right: 10px;
-}
-
-.exceeded-char-count {
-  color: colors.$error;
+  output {
+    margin-right: 10px;
+  }
 }
