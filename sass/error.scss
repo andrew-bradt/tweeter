@@ -1,6 +1,8 @@
+@use "colors";
+
 .error {
-  color: red;
-  border: 5px solid red;
+  color: colors.$error;
+  border: 5px solid colors.$error;
   padding: 20px;
   font-weight: 600;
   margin-bottom: 30px;

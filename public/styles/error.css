@@ -1,6 +1,6 @@
 .error {
-  color: red;
-  border: 5px solid red;
+  color: #FF0000;
+  border: 5px solid #FF0000;
   padding: 20px;
   font-weight: 600;
   margin-bottom: 30px;
